@@ -11,6 +11,7 @@
   "match"
   "case"
   "use"
+  "catch"
   "and"
   "or"
   "not"
@@ -62,6 +63,9 @@
 
 (typed_assignment
   type: (type) @type.builtin
+  name: (identifier) @variable)
+
+(catch_statement
   name: (identifier) @variable)
 
 ; String literals

@@ -81,6 +81,14 @@
     ],
     "description": "Match/case statement"
   },
+  "Catch Statement": {
+    "prefix": "catch",
+    "body": [
+      "catch ${1:result} = ${2:expr}:",
+      "    ${0}"
+    ],
+    "description": "Catch error from expression"
+  },
   "Error Handling": {
     "prefix": "errh",
     "body": [
