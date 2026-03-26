@@ -15,13 +15,13 @@
     ],
     "description": "Define a public function"
   },
-  "Typed Function": {
-    "prefix": "fnt",
+  "Void Function": {
+    "prefix": "fnv",
     "body": [
-      "fn (${1:num} ${2:a}, ${3:num} ${4:b}) ${5:num} ${6:name}:",
+      "fn (${1:params}) void ${2:name}:",
       "    ${0}"
     ],
-    "description": "Define a function with typed parameters"
+    "description": "Define a void function"
   },
   "Lambda": {
     "prefix": "lam",

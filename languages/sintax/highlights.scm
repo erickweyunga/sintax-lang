@@ -24,7 +24,12 @@
   "bool"
   "list"
   "dict"
+  "void"
+  "fn"
 ] @type.builtin
+
+; Union type pipe
+(return_type "|" @operator)
 
 ; Boolean literals
 (true) @boolean
@@ -56,6 +61,10 @@
 (typed_parameter
   type: (type) @type.builtin
   name: (identifier) @variable.parameter)
+
+; Return type
+(return_type
+  (type) @type.builtin)
 
 ; Variables
 (assignment
