@@ -1,5 +1,6 @@
 ; Keywords
 [
+  "pub"
   "fn"
   "return"
   "if"
@@ -25,13 +26,11 @@
 ] @type.builtin
 
 ; Boolean literals
-[
-  "true"
-  "false"
-] @boolean
+(true) @boolean
+(false) @boolean
 
 ; Null
-"null" @constant.builtin
+(null) @constant.builtin
 
 ; Function definition
 (function_definition
@@ -69,9 +68,13 @@
 (string) @string
 (single_string) @string
 
+; String escape sequences
+(escape_sequence) @string.escape
+
 ; String interpolation
 (interpolation
   "{" @punctuation.special
+  (identifier) @variable
   "}" @punctuation.special)
 
 ; Number literals
@@ -109,11 +112,6 @@
 ; Comments
 (comment) @comment
 (block_comment) @comment
-
-; Module paths
-(module_path
-  module: (identifier) @namespace
-  "/" @punctuation.delimiter)
 
 ; Use statement
 (use_statement

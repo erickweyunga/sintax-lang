@@ -1,0 +1,3 @@
+[submodule "grammars/sintax"]
+	path = grammars/sintax
+	url = https://github.com/erickweyunga/tree-sitter-sintax.git

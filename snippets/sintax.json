@@ -1,0 +1,179 @@
+{
+  "Function Definition": {
+    "prefix": "fn",
+    "body": [
+      "fn (${1:params}) ${2:return_type} ${3:name}:",
+      "    ${0}"
+    ],
+    "description": "Define a function"
+  },
+  "Public Function": {
+    "prefix": "pubfn",
+    "body": [
+      "pub fn (${1:params}) ${2:return_type} ${3:name}:",
+      "    ${0}"
+    ],
+    "description": "Define a public function"
+  },
+  "Typed Function": {
+    "prefix": "fnt",
+    "body": [
+      "fn (${1:num} ${2:a}, ${3:num} ${4:b}) ${5:num} ${6:name}:",
+      "    ${0}"
+    ],
+    "description": "Define a function with typed parameters"
+  },
+  "Lambda": {
+    "prefix": "lam",
+    "body": "fn(${1:x}) -> ${0}",
+    "description": "Lambda expression"
+  },
+  "If Statement": {
+    "prefix": "if",
+    "body": [
+      "if ${1:condition}:",
+      "    ${0}"
+    ],
+    "description": "If statement"
+  },
+  "If/Else": {
+    "prefix": "ife",
+    "body": [
+      "if ${1:condition}:",
+      "    ${2}",
+      "else:",
+      "    ${0}"
+    ],
+    "description": "If/else statement"
+  },
+  "For Loop": {
+    "prefix": "for",
+    "body": [
+      "for ${1:item} in ${2:iterable}:",
+      "    ${0}"
+    ],
+    "description": "For loop"
+  },
+  "For Range": {
+    "prefix": "forr",
+    "body": [
+      "for ${1:i} in range(${2:10}):",
+      "    ${0}"
+    ],
+    "description": "For loop with range"
+  },
+  "While Loop": {
+    "prefix": "while",
+    "body": [
+      "while ${1:condition}:",
+      "    ${0}"
+    ],
+    "description": "While loop"
+  },
+  "Match Statement": {
+    "prefix": "match",
+    "body": [
+      "match ${1:value}:",
+      "    case ${2:pattern}:",
+      "        ${3}",
+      "    _:",
+      "        ${0}"
+    ],
+    "description": "Match/case statement"
+  },
+  "Error Handling": {
+    "prefix": "errh",
+    "body": [
+      "result = ${1:operation}",
+      "match err(result):",
+      "    case true:",
+      "        >> result",
+      "    case false:",
+      "        ${0}"
+    ],
+    "description": "Error handling with match"
+  },
+  "Error Check": {
+    "prefix": "errc",
+    "body": [
+      "if err(${1:result}):",
+      "    ${0}"
+    ],
+    "description": "Check if value is an error"
+  },
+  "Print": {
+    "prefix": "pr",
+    "body": ">> ${0}",
+    "description": "Print statement"
+  },
+  "Print String": {
+    "prefix": "prs",
+    "body": ">> \"${0}\"",
+    "description": "Print a string"
+  },
+  "Print Multiple": {
+    "prefix": "prm",
+    "body": "print(${1:a}, ${0})",
+    "description": "Print multiple values"
+  },
+  "Use Import": {
+    "prefix": "use",
+    "body": "use \"${1:std/math}\"",
+    "description": "Import a module"
+  },
+  "Test Comment": {
+    "prefix": "test",
+    "body": "-- test: ${1:func}(${2:args}) == ${0}",
+    "description": "Test assertion comment"
+  },
+  "Typed Variable (num)": {
+    "prefix": "num",
+    "body": "num ${1:name} = ${0}",
+    "description": "Declare a typed num variable"
+  },
+  "Typed Variable (str)": {
+    "prefix": "str",
+    "body": "str ${1:name} = ${0}",
+    "description": "Declare a typed str variable"
+  },
+  "Typed Variable (bool)": {
+    "prefix": "bool",
+    "body": "bool ${1:name} = ${0}",
+    "description": "Declare a typed bool variable"
+  },
+  "List Literal": {
+    "prefix": "list",
+    "body": "list ${1:name} = [${0}]",
+    "description": "Declare a typed list variable"
+  },
+  "Dict Literal": {
+    "prefix": "dict",
+    "body": "dict ${1:name} = {${0}}",
+    "description": "Declare a typed dict variable"
+  },
+  "Map": {
+    "prefix": "map",
+    "body": "${1:list}.map(fn(${2:x}) -> ${0})",
+    "description": "Map over a list"
+  },
+  "Filter": {
+    "prefix": "filter",
+    "body": "${1:list}.filter(fn(${2:x}) -> ${0})",
+    "description": "Filter a list"
+  },
+  "Reduce": {
+    "prefix": "reduce",
+    "body": "${1:list}.reduce(fn(${2:acc}, ${3:x}) -> ${0}, ${4:0})",
+    "description": "Reduce a list"
+  },
+  "Comment": {
+    "prefix": "--",
+    "body": "-- ${0}",
+    "description": "Line comment"
+  },
+  "Block Comment": {
+    "prefix": "--{",
+    "body": "--{ ${0} }--",
+    "description": "Block comment"
+  }
+}

@@ -5,7 +5,12 @@ schema_version = 1
 authors = ["Eric Kweyunga <erickweyunga@gmail.com>"]
 description = "Sintax language support — syntax highlighting, brackets, outline"
 repository = "https://github.com/erickweyunga/sintax"
+snippets = ["./snippets/sintax.json"]
+
+[language_servers.sintax-lsp]
+name = "Sintax LSP"
+languages = ["Sintax"]
 
 [grammars.sintax]
 repository = "https://github.com/erickweyunga/tree-sitter-sintax"
-rev = "f5a5736"
+rev = "a1867b8"

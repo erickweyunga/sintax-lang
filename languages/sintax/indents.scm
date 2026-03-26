@@ -6,3 +6,4 @@
 (for_statement ":" @end) @indent
 (match_statement ":" @end) @indent
 (case_clause ":" @end) @indent
+(default_clause ":" @end) @indent
